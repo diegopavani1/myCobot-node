@@ -1,6 +1,6 @@
 {
   "name": "mycobot-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Diego Pavani",
   "license": "MIT",
   "description": "Node.js library for controlling the myCobot 280 arm with M5Stack",
@@ -27,10 +27,10 @@
     "lint": "eslint src/**/*.ts",
     "prepublishOnly": "npm run clean && npm run build",
     "version:patch": "npm version patch && git push origin main && git push --tags",
-    "version:minor": "npm version minor && git push origin main && git push --tags", 
+    "version:minor": "npm version minor && git push origin main && git push --tags",
     "version:major": "npm version major && git push origin main && git push --tags",
     "release:patch": "npm run version:patch",
-    "release:minor": "npm run version:minor", 
+    "release:minor": "npm run version:minor",
     "release:major": "npm run version:major"
   },
   "keywords": [
