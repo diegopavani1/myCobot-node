@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
@@ -31,10 +35,7 @@ jobs:
       run: npm ci
       
     - name: Build project
-      run: |
-        echo "Building with TypeScript..."
-        npx tsc --version
-        npx tsc
+      run: npm run build
       
     - name: Check if version changed
       id: version-check
@@ -59,12 +60,10 @@ jobs:
         
     - name: Create GitHub Release
       if: steps.version-check.outputs.version-exists == 'false'
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ steps.version-check.outputs.current-version }}
-        release_name: Release v${{ steps.version-check.outputs.current-version }}
+        name: Release v${{ steps.version-check.outputs.current-version }}
         body: |
           ## Changes in v${{ steps.version-check.outputs.current-version }}
           

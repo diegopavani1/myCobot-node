@@ -97,6 +97,7 @@ Thumbs.db
 *.json
 !package*.json
 !.eslintrc.json
+!tsconfig.json
 
 # Temporary files
 tmp/
