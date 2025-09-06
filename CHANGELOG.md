@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Automated versioning and release pipeline
+- Auto-increment version on each merge to main
+- Automated GitHub releases with detailed notes
+- Git tags automatically created and pushed
+
 ## [0.1.0] - 2025-01-XX
 
 ### Added
