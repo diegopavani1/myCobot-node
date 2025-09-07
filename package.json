@@ -61,10 +61,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diegopavani1/mycobot-controller.git"
+    "url": "git+https://github.com/diegopavani1/mycobot-node.git"
   },
   "bugs": {
-    "url": "https://github.com/diegopavani1/mycobot-controller/issues"
+    "url": "https://github.com/diegopavani1/mycobot-node/issues"
   },
-  "homepage": "https://github.com/diegopavani1/mycobot-controller#readme"
+  "homepage": "https://github.com/diegopavani1/mycobot-node#readme"
 }
